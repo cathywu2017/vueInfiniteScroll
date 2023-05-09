@@ -15,6 +15,7 @@
 <style>
 .item {
   width: 600px;
+  height: 150px;
   padding: 15px;
   margin: 0 auto 10px;
 }
