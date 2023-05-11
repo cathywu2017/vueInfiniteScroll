@@ -27,7 +27,6 @@ onMounted(() => {
   getUser();
 
   document.querySelector('.scrollBlock').addEventListener('scroll', () => {
-    console.log('3', document.querySelector('.scrollBlock').scrollTop)
     scrollTop.value = document.querySelector('.scrollBlock').scrollTop;
   })
 });
@@ -45,7 +44,8 @@ watch(scrollTop, (scrollTop, prevScrollTop) => {
   if(scrollTop + clientHeight === scrollHeight) {
     len.value = len.value + 6;
 
-    len.value < 103 && getUser(len.value);
+    // 每頁數量只有100個
+    len.value < 100 && getUser(len.value);
   };
 });
 </script>
