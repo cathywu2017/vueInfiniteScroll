@@ -18,9 +18,9 @@ jobs:
       # 設置 node
       - name: Set up Node
         uses: actions/setup-node@v3
-          with:
-            node-version: 16
-            cache: 'npm'
+        with:
+          node-version: 16
+          cache: 'npm'
 
       # 執行安裝
       - name: install dependencies
