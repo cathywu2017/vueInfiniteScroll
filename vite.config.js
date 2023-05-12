@@ -15,4 +15,26 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.github.com/orgs/nodejs/repos',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        // configure: (proxy, options) => {
+        //   proxy.on('proxyReq', (proxyReq, req, _res) => {
+        //     console.log('Sending Request to the Target:', req.method, options.target + proxyReq.path);
+        //   });
+
+        //   proxy.on('proxyRes', (proxyRes, req, res) => {
+        //     console.log('Receiving Response from the Target:', req.method, options.target + req.url);
+        //   });
+
+        //   proxy.on('error', (err, req, res) => {
+        //     console.log('Error Occurred:', err);
+        //   });
+        // },
+      },
+    },
+  },
 });
