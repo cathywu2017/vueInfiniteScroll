@@ -20,6 +20,7 @@ export default defineConfig({
       '/api': {
         target: 'https://api.github.com/orgs/nodejs/repos',
         changeOrigin: true,
+        secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
         // configure: (proxy, options) => {
         //   proxy.on('proxyReq', (proxyReq, req, _res) => {
