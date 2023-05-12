@@ -1,0 +1,39 @@
+# GitHub Action 名稱
+name: Deploy to GitHub Pages
+
+# push 到 master 分支觸發 Github Actions
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  # 定義 jobs
+  deploy:
+    runs-on: ubuntu-latest # 運行環境
+    steps:
+      # 設置 GitHub Actions 的相關環境
+      - uses: actions/checkout@v3
+
+      # 設置 node
+      - name: Set up Node
+        uses: actions/setup-node@v3
+          with:
+            node-version: 16
+            cache: 'npm'
+
+      # 執行安裝
+      - name: install dependencies
+        run: npm install
+
+      # 打包
+      - name: build
+        run: npm run build
+
+      # 部署到 GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
