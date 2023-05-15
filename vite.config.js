@@ -8,7 +8,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 export default defineConfig({
   // 影響 running build 產生 index.html 檔案之路徑
   // https://stackoverflow.com/questions/69744253/vite-build-always-using-static-paths
-  base: '/vueInfiniteScroll/',
+  base: './',
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
