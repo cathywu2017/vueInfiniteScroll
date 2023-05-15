@@ -20,7 +20,7 @@ export default defineConfig({
       '/api': {
         target: 'https://api.github.com/orgs/nodejs/repos',
         changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
