@@ -14,7 +14,7 @@ async function getUser(num = 6) {
     const response = await axios.get(uri, {
       params: {
         per_page: num,
-      }
+      },
     });
 
     data.value = response.data;
