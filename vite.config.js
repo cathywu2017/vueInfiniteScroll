@@ -16,8 +16,6 @@ export default defineConfig({
     },
   },
   server: {
-    cors: true,
-    open: true,
     proxy: {
       '/api': {
         target: 'https://api.github.com/orgs/nodejs/repos',
