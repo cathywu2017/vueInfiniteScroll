@@ -7,7 +7,7 @@ const data = ref([]);
 const len = ref(6);
 const scrollTop = ref(0);
 
-const uri = 'https://api.github.com/orgs/nodejs/repos';
+const uri = import.meta.env.VITE_BASE_API;
 
 async function getUser(num = 6) {
   try {

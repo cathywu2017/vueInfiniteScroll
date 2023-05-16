@@ -28,7 +28,7 @@ jobs:
 
       # 編譯打包
       - name: build
-        run: npm run build
+        run: npm run build:prod
 
       # 部署到 GitHub Pages
       - name: Deploy
