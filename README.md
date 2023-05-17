@@ -1,8 +1,8 @@
 # vue3InfiniteScroll
 
-## Demo
+## Github Pages
 
-[Github Pages](https://cathywu2017.github.io/vueInfiniteScroll/)
+[Demo](https://cathywu2017.github.io/vueInfiniteScroll/)
 
 ## Project Setup
 
@@ -22,6 +22,6 @@ npm run dev
 npm run build
 ```
 
-## Github repos
+## Github Repos Owner
 
 [Node.js](https://github.com/orgs/nodejs/repositories)
