@@ -17,6 +17,14 @@
   width: 600px;
   height: 150px;
   padding: 15px;
-  margin: 0 auto 10px;
+  margin: 0 auto 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 1rem;
+}
+.item:first-child {
+  margin-top: 20px;
 }
 </style>

@@ -18,6 +18,7 @@ header {
   padding: 15px 0;
   text-align: center;
   background-color: #000;
+  box-shadow: 0px 3px 9px #555;
 }
 
 .container {
